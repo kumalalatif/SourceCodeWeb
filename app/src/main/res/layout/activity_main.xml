@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kumalalatif.getwebpagesourcecode.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Get Source Code"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input your source code bellow :"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="19dp"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get source code"
+        android:id="@+id/Button"
+        android:onClick="getSourceCode"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finally you get source code !!!"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/scrollView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.ContentLoadingProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleLarge"
+                android:id="@+id/ProgressBar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SourceCode"
+                android:textSize="5dp"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
